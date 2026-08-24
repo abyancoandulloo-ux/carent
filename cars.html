@@ -122,7 +122,7 @@
             background: #0f0d0d;
         }
 
-        /* ── BACKGROUND LAYER (background2.jpg) ── */
+        /* ── BACKGROUND LAYER (background1.jpg - fully visible) ── */
         .bg-layer {
             position: absolute;
             top: 0;
@@ -130,17 +130,17 @@
             width: 100%;
             height: 100%;
             z-index: 0;
-            background: url('images/background1.jpg') center center / cover no-repeat;
-            filter: brightness(1.05) saturate(1.1);
+            background: url('images/background1.jpg') center center / contain no-repeat;
+            background-color: #0f0d0d;
         }
         .bg-layer::after {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(135deg,
-                    rgba(15, 13, 13, 0.40) 0%,
-                    rgba(15, 13, 13, 0.20) 40%,
-                    rgba(15, 13, 13, 0.45) 100%);
+                    rgba(15, 13, 13, 0.30) 0%,
+                    rgba(15, 13, 13, 0.15) 40%,
+                    rgba(15, 13, 13, 0.30) 100%);
             pointer-events: none;
         }
 
@@ -778,18 +778,21 @@
             border-color: var(--gold);
         }
 
-        /* ─── FULL-SCREEN AMAZON-STYLE MODAL ─── */
+        /* ── MODAL (full-screen product view) ── */
         .modal-overlay {
             position: fixed;
             inset: 0;
             z-index: 2000;
-            background: #0f0d0d;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             display: flex;
-            align-items: stretch;
-            justify-content: stretch;
+            align-items: center;
+            justify-content: center;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.4s ease;
+            padding: 20px;
         }
         .modal-overlay.open {
             opacity: 1;
@@ -798,31 +801,30 @@
 
         .modal-content {
             background: #1a1717;
-            width: 100vw;
-            height: 100vh;
-            max-width: 100%;
-            max-height: 100%;
-            border-radius: 0;
-            border: none;
-            box-shadow: none;
+            border-radius: 24px;
+            max-width: 1100px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
             position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
         }
 
         .modal-close {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 20;
-            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             color: #fff;
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -839,26 +841,19 @@
 
         .modal-body {
             display: flex;
-            flex-wrap: nowrap;
-            height: 100%;
-            width: 100%;
-            padding: 0;
-            gap: 0;
-            flex: 1;
-            overflow: hidden;
+            flex-wrap: wrap;
+            padding: 24px;
+            gap: 28px;
         }
 
-        /* Left: image carousel */
         .modal-carousel {
-            flex: 1;
-            height: 100%;
-            border-radius: 0;
-            max-height: 100%;
-            aspect-ratio: unset;
-            min-width: 300px;
+            flex: 1 1 50%;
+            min-width: 280px;
+            aspect-ratio: 4/3;
             background: #0f0d0d;
-            position: relative;
+            border-radius: 16px;
             overflow: hidden;
+            position: relative;
         }
         .modal-carousel .carousel-slides {
             position: absolute;
@@ -881,21 +876,21 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            padding: 20px;
+            padding: 16px;
         }
         .modal-carousel .carousel-arrow {
             opacity: 1;
             pointer-events: auto;
             background: rgba(0, 0, 0, 0.6);
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             font-size: 1rem;
         }
         .modal-carousel .carousel-arrow:hover {
             background: rgba(212, 175, 122, 0.4);
         }
         .modal-carousel .carousel-dots {
-            bottom: 20px;
+            bottom: 14px;
         }
         .modal-carousel .carousel-dot {
             width: 8px;
@@ -905,18 +900,15 @@
             width: 24px;
         }
 
-        /* Right: details panel */
         .modal-detail {
-            flex: 0 0 440px;
-            padding: 32px 32px 0;
-            overflow-y: auto;
-            height: 100%;
+            flex: 1 1 40%;
             display: flex;
             flex-direction: column;
-            background: #1a1717;
+            gap: 12px;
+            padding: 8px 0;
         }
         .modal-detail .brand {
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--gold);
@@ -924,52 +916,33 @@
         }
         .modal-detail .name {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 500;
             color: #fff;
-            margin: 4px 0 2px;
             line-height: 1.1;
         }
-        .modal-detail .size {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.4);
-            margin-bottom: 8px;
-        }
-        .modal-detail .desc {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.65);
-            line-height: 1.7;
-            margin-bottom: 16px;
-            font-weight: 300;
-            flex: 1;
-        }
         .modal-detail .price {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 600;
             color: var(--gold);
-            margin-bottom: 16px;
+            margin: 4px 0 8px;
         }
         .modal-detail .price span {
             font-size: 0.9rem;
             font-weight: 300;
             color: rgba(255, 255, 255, 0.3);
         }
-
-        .modal-footer-actions {
-            margin-top: auto;
-            padding: 16px 0 24px;
-            background: #1a1717;
-            position: sticky;
-            bottom: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        .modal-detail .desc {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.7;
+            font-weight: 300;
+            flex: 1;
         }
 
         .modal-whatsapp-btn {
-            width: 100%;
-            padding: 16px;
+            margin-top: 16px;
+            padding: 16px 24px;
             background: #25d366;
             border: none;
             border-radius: 9999px;
@@ -991,60 +964,34 @@
             box-shadow: 0 12px 40px rgba(37, 211, 102, 0.45);
         }
 
-        /* ── RESPONSIVE MODAL ── */
         @media (max-width: 768px) {
             .modal-body {
                 flex-direction: column;
-                overflow-y: auto;
+                padding: 16px;
+                gap: 16px;
             }
             .modal-carousel {
-                height: 40vh;
-                flex: none;
+                flex: 1 1 auto;
                 width: 100%;
+                aspect-ratio: 4/3;
                 min-width: unset;
-                max-height: 40vh;
-            }
-            .modal-carousel .carousel-slide img {
-                padding: 10px;
-            }
-            .modal-detail {
-                flex: 1;
-                width: 100%;
-                padding: 16px 16px 0;
-                overflow-y: visible;
-                height: auto;
-                flex-basis: auto;
-                max-height: none;
             }
             .modal-detail .name {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
             .modal-detail .price {
                 font-size: 1.4rem;
             }
-            .modal-footer-actions {
-                position: sticky;
-                bottom: 0;
-                background: #1a1717;
-                padding: 12px 0 16px;
-                margin-top: 12px;
-                border-top: 1px solid rgba(255, 255, 255, 0.05);
-            }
-            .modal-close {
-                top: 12px;
-                right: 12px;
-                width: 38px;
-                height: 38px;
-                font-size: 1rem;
+            .modal-whatsapp-btn {
+                font-size: 0.9rem;
+                padding: 14px 20px;
             }
             .modal-overlay {
-                align-items: stretch;
-                justify-content: stretch;
+                padding: 10px;
             }
             .modal-content {
-                height: 100vh;
-                width: 100vw;
-                border-radius: 0;
+                max-height: 95vh;
+                border-radius: 16px;
             }
             .filter-section {
                 flex-direction: column;
@@ -1060,22 +1007,15 @@
         }
 
         @media (max-width: 480px) {
-            .modal-carousel {
-                height: 35vh;
-                max-height: 35vh;
-            }
             .modal-detail .name {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
             .modal-detail .price {
                 font-size: 1.2rem;
             }
-            .modal-detail .desc {
-                font-size: 0.85rem;
-            }
             .modal-whatsapp-btn {
-                font-size: 0.9rem;
-                padding: 14px;
+                font-size: 0.8rem;
+                padding: 12px 16px;
             }
             .product-grid {
                 grid-template-columns: 1fr 1fr;
@@ -1250,7 +1190,7 @@
     <!-- ─── HERO CONTAINER ─── -->
     <div class="hero-container">
 
-        <!-- BACKGROUND (background2.jpg) -->
+        <!-- BACKGROUND (background1.jpg - fully visible) -->
         <div class="bg-layer"></div>
 
         <!-- PARTICLES -->
@@ -1326,7 +1266,7 @@
         </div>
     </section>
 
-    <!-- ─── FULL-SCREEN AMAZON-STYLE PRODUCT DETAIL MODAL ─── -->
+    <!-- ─── PRODUCT DETAIL MODAL ─── -->
     <div class="modal-overlay" id="productModal" onclick="closeModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
@@ -1609,7 +1549,7 @@
             filterCars();
         }
 
-        // ── FULL-SCREEN MODAL FUNCTIONS ──
+        // ── MODAL FUNCTIONS ──
         let modalCarId = null;
         let modalSlideIndex = 0;
 
@@ -1647,18 +1587,15 @@
                     <div class="name">${car.name}</div>
                     <div class="price">${priceStr}</div>
                     <div class="desc">${car.description}</div>
-                    <div class="modal-footer-actions">
-                        <a href="https://wa.me/23052541954?text=Hello%20car%20rent.mu%2C%20I%20would%20like%20to%20rent%20the%20${encodeURIComponent(car.brand + ' ' + car.name)}.%20Please%20let%20me%20know%20about%20availability%20and%20rates." 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="modal-whatsapp-btn">
-                            <i class="fa-brands fa-whatsapp"></i> Rent via WhatsApp
-                        </a>
-                    </div>
+                    <a href="https://wa.me/23052541954?text=Hello%20car%20rent.mu%2C%20I%20would%20like%20to%20rent%20the%20${encodeURIComponent(car.brand + ' ' + car.name)}.%20Please%20let%20me%20know%20about%20availability%20and%20rates." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="modal-whatsapp-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Rent via WhatsApp
+                    </a>
                 </div>
             `;
 
-            // Reset modal slide
             const slides = document.getElementById('modalSlides');
             if (slides) slides.style.transform = 'translateX(0)';
 
