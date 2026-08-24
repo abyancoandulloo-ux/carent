@@ -359,7 +359,7 @@
                 flex-wrap: wrap;
                 padding: 0.8rem 1.5rem;
                 border-radius: 40px;
-                margin-top: 1rem;
+                margin-top: 0.8rem; /* reduced from 1rem */
             }
             .logo-link span {
                 font-size: 1.4rem;
@@ -997,12 +997,23 @@
                 flex-direction: column;
                 align-items: stretch;
                 padding: 0 1rem;
+                margin-top: -1rem; /* pull search bar up */
             }
             .filter-group {
                 justify-content: center;
             }
             .search-wrapper {
                 flex: 1 1 auto;
+            }
+            .hero-text {
+                padding: 2rem 1.5rem 2rem; /* reduced padding */
+                min-height: 40vh; /* reduced min-height */
+            }
+            .hero-text p {
+                margin: 0.5rem auto 1rem; /* reduce margins */
+            }
+            .hero-text .badge {
+                margin-bottom: 0.8rem;
             }
         }
 
@@ -1048,6 +1059,23 @@
             }
             .results-count {
                 font-size: 0.7rem;
+            }
+            .hero-text {
+                padding: 1.5rem 1rem 1.5rem;
+                min-height: 35vh;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-text p {
+                font-size: 0.9rem;
+            }
+            .navbar {
+                margin-top: 0.5rem;
+                padding: 0.6rem 1rem;
+            }
+            .filter-section {
+                margin-top: -0.5rem;
             }
         }
 
