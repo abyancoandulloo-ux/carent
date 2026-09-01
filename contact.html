@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ─── PRIMARY META ─── -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>car rent.mu – Contact Us</title>
+    <title>Contact Us – Car Rental Mauritius | car-rent-mauritius.com</title>
+    <meta name="description" content="Contact car-rent-mauritius.com for car rental inquiries in Mauritius. Call +230 5254 1954 or email madaugeeseeruttun@gmail.com. We deliver to your hotel!" />
+    <meta name="keywords" content="contact car rental Mauritius, car rental phone number, Mauritius car hire contact, car-rent-mauritius" />
+    <link rel="canonical" href="https://car-rent-mauritius.com/contact.html" />
+
+    <!-- ─── FAVICON ─── -->
+    <link rel="icon" href="logo.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="logo.jpg" />
+
+    <!-- ─── OPEN GRAPH ─── -->
+    <meta property="og:title" content="Contact Us – Car Rental Mauritius | car-rent-mauritius.com" />
+    <meta property="og:description" content="Contact us for car rental inquiries in Mauritius. Call +230 5254 1954 or email madaugeeseeruttun@gmail.com. We deliver to your hotel!" />
+    <meta property="og:image" content="https://car-rent-mauritius.com/logo.jpg" />
+    <meta property="og:url" content="https://car-rent-mauritius.com/contact.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Us – Car Rental Mauritius" />
+    <meta name="twitter:description" content="Contact us for car rental inquiries in Mauritius. Call +230 5254 1954 or email us." />
+    <meta name="twitter:image" content="https://car-rent-mauritius.com/logo.jpg" />
+
+    <!-- ─── STRUCTURED DATA (JSON-LD) ─── -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "car-rent-mauritius.com",
+            "url": "https://car-rent-mauritius.com/",
+            "logo": "https://car-rent-mauritius.com/logo.jpg",
+            "description": "Car rental service in Mauritius with hotel delivery and pay-at-hotel option.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Port Louis",
+                "addressCountry": "Mauritius"
+            },
+            "telephone": "+23052541954",
+            "email": "madaugeeseeruttun@gmail.com",
+            "priceRange": "€20 – €58 per day",
+            "openingHours": "Mo-Sa 08:00-20:00",
+            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+            "areaServed": {
+                "@type": "Country",
+                "name": "Mauritius"
+            },
+            "availableLanguage": ["English", "French"],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+23052541954",
+                "contactType": "Customer Service",
+                "email": "madaugeeseeruttun@gmail.com",
+                "availableLanguage": ["English", "French"]
+            }
+        }
+    </script>
+
+    <!-- ─── GOOGLE FONTS & FONTS AWESOME ─── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
     <style>
         /* ── RESET & BASE ── */
         * {
@@ -122,7 +178,7 @@
             background: #0f0d0d;
         }
 
-        /* ── BACKGROUND LAYER (background2.jpg) ── */
+        /* ── BACKGROUND LAYER (using background2.jpg) ── */
         .bg-layer {
             position: absolute;
             top: 0;
@@ -138,9 +194,9 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(135deg,
-                    rgba(10, 8, 8, 0.70) 0%,
-                    rgba(15, 13, 13, 0.50) 40%,
-                    rgba(10, 8, 8, 0.70) 100%);
+                    rgba(15, 13, 13, 0.40) 0%,
+                    rgba(15, 13, 13, 0.20) 40%,
+                    rgba(15, 13, 13, 0.45) 100%);
             pointer-events: none;
         }
 
@@ -378,27 +434,26 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 4rem 2rem 3rem;
+            padding: 4rem 2rem 4rem;
             max-width: 80rem;
             margin: 0 auto;
             width: 100%;
-            min-height: 50vh;
+            min-height: 60vh;
         }
 
         .hero-text .badge {
             display: inline-block;
-            background: rgba(212, 175, 122, 0.20);
-            color: var(--gold-light);
+            background: rgba(212, 175, 122, 0.15);
+            color: var(--gold);
             font-size: 0.7rem;
             font-weight: 600;
             letter-spacing: 0.5px;
             padding: 0.4rem 1.6rem;
             border-radius: 40px;
-            border: 1px solid rgba(212, 175, 122, 0.20);
+            border: 1px solid rgba(212, 175, 122, 0.15);
             margin-bottom: 1.2rem;
             text-transform: uppercase;
             backdrop-filter: blur(8px);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.6);
         }
         .hero-text h1 {
             font-family: 'Cormorant Garamond', serif;
@@ -407,21 +462,20 @@
             line-height: 1.08;
             letter-spacing: -0.5px;
             color: #fff;
-            text-shadow: 0 4px 50px rgba(0, 0, 0, 0.7), 0 2px 20px rgba(0,0,0,0.5);
+            text-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
             max-width: 780px;
         }
         .hero-text h1 .gold {
             font-weight: 700;
             font-style: italic;
-            text-shadow: 0 0 30px rgba(212, 175, 122, 0.2);
         }
         .hero-text p {
             font-size: 1.05rem;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(255, 255, 255, 0.7);
             max-width: 560px;
-            margin: 1rem auto 0;
+            margin: 1rem auto 2rem;
             font-weight: 300;
-            text-shadow: 0 2px 30px rgba(0, 0, 0, 0.6);
+            text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
         }
 
         /* ── CONTACT SECTION ── */
@@ -634,6 +688,12 @@
             color: #fff;
         }
 
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
         .btn-submit {
             width: 100%;
             padding: 14px;
@@ -681,7 +741,6 @@
             margin-top: 0.3rem;
         }
 
-        /* ── RESPONSIVE ── */
         @media (max-width: 1024px) {
             .contact-inner {
                 grid-template-columns: 1fr;
@@ -701,6 +760,9 @@
             }
             .contact-form-wrapper {
                 padding: 1.5rem;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
             }
             .contact-item {
                 padding: 12px 14px;
@@ -873,7 +935,7 @@
     <!-- ─── PRELOADER ─── -->
     <div id="preloader" aria-hidden="true">
         <div class="ring"></div>
-        <p>car rent.mu</p>
+        <p>car-rent-mauritius.com</p>
     </div>
 
     <!-- ─── HERO CONTAINER ─── -->
@@ -893,18 +955,18 @@
         <div class="content-layer">
 
             <!-- NAVIGATION -->
-            <nav class="navbar">
-                <a href="index.html" class="logo-link">
-                    <img src="logo.jpg" alt="car rent.mu" onerror="this.style.display='none'" />
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="logo-link" aria-label="car-rent-mauritius.com home">
+                    <img src="logo.jpg" alt="car-rent-mauritius.com logo - car rental in Mauritius" width="38" height="38" />
                     <span>car <span class="gold">rent</span>.mu</span>
                 </a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="cars.html">Fleet</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                     <li><a href="cars.html" class="btn-nav">Book Now</a></li>
                 </ul>
-                <button class="menu-toggle" onclick="toggleNav()" aria-label="Toggle navigation">
+                <button class="menu-toggle" onclick="toggleNav()" aria-label="Toggle navigation menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </nav>
@@ -925,12 +987,12 @@
     </div>
 
     <!-- ─── CONTACT SECTION ─── -->
-    <section class="contact-section" id="contact">
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
         <div class="contact-inner">
 
             <!-- CONTACT INFO -->
             <div class="contact-info">
-                <h2>Let's <span class="gold">Connect</span></h2>
+                <h2 id="contact-heading">Let's <span class="gold">Connect</span></h2>
                 <p class="subtitle">
                     We're here to make your car rental experience seamless.
                     Whether you need assistance with a booking, have a question about our fleet,
@@ -947,16 +1009,7 @@
                         </div>
                     </div>
 
-                    <!-- Business Hours -->
-                    <div class="contact-item">
-                        <div class="icon"><i class="fa-solid fa-clock"></i></div>
-                        <div class="info">
-                            <div class="label">Business Hours</div>
-                            <div class="value">Mon – Sat: 8:00 AM – 8:00 PM</div>
-                        </div>
-                    </div>
-
-                    <!-- Phone (added below) -->
+                    <!-- Phone -->
                     <div class="contact-item">
                         <div class="icon"><i class="fa-solid fa-phone"></i></div>
                         <div class="info">
@@ -965,12 +1018,21 @@
                         </div>
                     </div>
 
-                    <!-- Email (added below) -->
+                    <!-- Email -->
                     <div class="contact-item">
                         <div class="icon"><i class="fa-solid fa-envelope"></i></div>
                         <div class="info">
                             <div class="label">Email</div>
                             <div class="value"><a href="mailto:madaugeeseeruttun@gmail.com">madaugeeseeruttun@gmail.com</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="contact-item">
+                        <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="info">
+                            <div class="label">Business Hours</div>
+                            <div class="value">Mon – Sat: 8:00 AM – 8:00 PM</div>
                         </div>
                     </div>
                 </div>
@@ -985,7 +1047,7 @@
                 </div>
             </div>
 
-            <!-- CONTACT FORM -->
+            <!-- CONTACT FORM (sends via WhatsApp) -->
             <div class="contact-form-wrapper">
                 <h3>Send a <span class="gold">Message</span></h3>
                 <p class="form-subtitle">We'll get back to you within 24 hours.</p>
@@ -1028,7 +1090,7 @@
     </section>
 
     <!-- ─── FOOTER ─── -->
-    <footer>
+    <footer id="footer" role="contentinfo">
         <div class="container">
             <div class="footer-row">
                 <div class="footer-col">
@@ -1044,9 +1106,9 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="cars.html">Cars</a></li>
+                        <li><a href="cars.html">Fleet</a></li>
                         <li><a href="#rates">Rates</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1057,7 +1119,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 car rent.mu — Mauritius. All rights reserved.</p>
+                <p>&copy; 2026 car-rent-mauritius.com — Mauritius. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1090,7 +1152,7 @@
             }, 3000);
         })();
 
-        // ── FORM HANDLING ──
+        // ── FORM HANDLING (sends via WhatsApp) ──
         function handleSubmit(event) {
             event.preventDefault();
 
@@ -1123,7 +1185,7 @@
                 'other': 'Other'
             };
 
-            const whatsappMsg = `Hello car rent.mu,
+            const whatsappMsg = `Hello car-rent-mauritius.com,
 
 I would like to get in touch regarding: ${subjectMap[subject] || 'General Inquiry'}
 
@@ -1134,28 +1196,24 @@ ${message}
 
 Please get back to me at your earliest convenience. Thank you!`;
 
-            // Simulate sending (open WhatsApp with pre-filled message)
+            // Open WhatsApp with the message
+            const encodedMsg = encodeURIComponent(whatsappMsg);
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMsg}`, '_blank');
+
+            // Show success state
+            form.style.display = 'none';
+            successDiv.style.display = 'block';
+
+            // Reset button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-regular fa-paper-plane" style="margin-right:10px;"></i> Send Message';
+
+            // Reset form after delay (optional)
             setTimeout(() => {
-                // Open WhatsApp with the message
-                const encodedMsg = encodeURIComponent(whatsappMsg);
-                window.open(`https://wa.me/${whatsappNumber}?text=${encodedMsg}`, '_blank');
-
-                // Show success state
-                form.style.display = 'none';
-                successDiv.style.display = 'block';
-
-                // Reset button
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fa-regular fa-paper-plane" style="margin-right:10px;"></i> Send Message';
-
-                // Reset form after 2 seconds (but keep success visible)
-                setTimeout(() => {
-                    document.getElementById('name').value = '';
-                    document.getElementById('subject').value = 'booking';
-                    document.getElementById('message').value = '';
-                }, 3000);
-
-            }, 1000);
+                document.getElementById('name').value = '';
+                document.getElementById('subject').value = 'booking';
+                document.getElementById('message').value = '';
+            }, 3000);
         }
     </script>
 
