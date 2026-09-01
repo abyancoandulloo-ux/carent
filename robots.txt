@@ -1,0 +1,18 @@
+# ─── car-rent-mauritius.com robots.txt ───
+
+User-agent: *
+Allow: /
+
+# Block any sensitive or duplicate content
+Disallow: /images/
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+
+# Block admin or staging areas (if any)
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /test/
+
+# Sitemap location
+Sitemap: https://car-rent-mauritius.com/sitemap.xml
