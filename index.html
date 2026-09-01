@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ─── PRIMARY META ─── -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>car rent.mu – Rent a Car in Mauritius</title>
+    <title>Car Rental Mauritius | Rent a Car in Mauritius – car-rent-mauritius.com</title>
+    <meta name="description" content="🚗✨ Rent a car in Mauritius with ease. Book online, get free hotel delivery, and pay upon arrival. Best rates, flexible rental, island-ready service." />
+    <meta name="keywords" content="car rental Mauritius, rent a car Mauritius, car hire Mauritius, Mauritius car rental, hotel delivery Mauritius, pay at hotel, car-rent-mauritius" />
+    <link rel="canonical" href="https://car-rent-mauritius.com/" />
+
+    <!-- ─── FAVICON ─── -->
+    <link rel="icon" href="logo.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="logo.jpg" />
+
+    <!-- ─── OPEN GRAPH ─── -->
+    <meta property="og:title" content="Car Rental Mauritius – Rent a Car in Mauritius" />
+    <meta property="og:description" content="🚗✨ Book your car online, get free hotel delivery, and pay upon arrival. Best rates, flexible rental, island-ready service." />
+    <meta property="og:image" content="https://car-rent-mauritius.com/logo.jpg" />
+    <meta property="og:url" content="https://car-rent-mauritius.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Car Rental Mauritius – Rent a Car in Mauritius" />
+    <meta name="twitter:description" content="🚗✨ Book your car online, get free hotel delivery, and pay upon arrival. Best rates, flexible rental, island-ready service." />
+    <meta name="twitter:image" content="https://car-rent-mauritius.com/logo.jpg" />
+
+    <!-- ─── STRUCTURED DATA (JSON-LD) ─── -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "AutoRental",
+            "name": "car-rent-mauritius.com",
+            "url": "https://car-rent-mauritius.com/",
+            "logo": "https://car-rent-mauritius.com/logo.jpg",
+            "description": "Car rental service in Mauritius with hotel delivery and pay-at-hotel option. Wide fleet of vehicles for all needs.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Port Louis",
+                "addressCountry": "Mauritius"
+            },
+            "telephone": "+23052541954",
+            "priceRange": "€20 – €58 per day",
+            "openingHours": "Mo-Sa 08:00-20:00",
+            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+            "areaServed": {
+                "@type": "Country",
+                "name": "Mauritius"
+            },
+            "availableLanguage": ["English", "French"],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Car Rental Fleet",
+                "itemListElement": [
+                    { "@type": "Offer", "itemOffered": { "@type": "Car", "name": "Expresso", "price": "20-22" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Car", "name": "Suzuki Celerio", "price": "23-28" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Car", "name": "Hyundai Grand i10", "price": "23-28" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Car", "name": "Suzuki Swift", "price": "25-30" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Car", "name": "7-Seater", "price": "50-58" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Car", "name": "Perodua", "price": "28-48" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Car", "name": "Suzuki Dzire", "price": "on request" } }
+                ]
+            }
+        }
+    </script>
+
+    <!-- ─── GOOGLE FONTS & FONTS AWESOME ─── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
     <style>
         /* ── RESET & BASE ── */
         * {
@@ -1207,7 +1268,7 @@
     <!-- ─── PRELOADER ─── -->
     <div id="preloader" aria-hidden="true">
         <div class="ring"></div>
-        <p>car rent.mu</p>
+        <p>car-rent-mauritius.com</p>
     </div>
 
     <!-- ─── HERO CONTAINER ─── -->
@@ -1227,9 +1288,9 @@
         <div class="content-layer">
 
             <!-- NAVIGATION -->
-            <nav class="navbar">
-                <a href="#" class="logo-link">
-                    <img src="logo.jpg" alt="car rent.mu" onerror="this.style.display='none'" />
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <a href="#" class="logo-link" aria-label="car-rent-mauritius.com home">
+                    <img src="logo.jpg" alt="car-rent-mauritius.com logo - car rental in Mauritius" width="38" height="38" />
                     <span>car <span class="gold">rent</span>.mu</span>
                 </a>
                 <ul class="nav-links" id="navLinks">
@@ -1238,7 +1299,7 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="#fleet" class="btn-nav">Book Now</a></li>
                 </ul>
-                <button class="menu-toggle" onclick="toggleNav()" aria-label="Toggle navigation">
+                <button class="menu-toggle" onclick="toggleNav()" aria-label="Toggle navigation menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </nav>
@@ -1263,7 +1324,8 @@
     </div>
 
     <!-- ─── WHY CHOOSE US SECTION ─── -->
-    <section class="features-section" id="features">
+    <section class="features-section" id="features" aria-labelledby="features-heading">
+        <h2 id="features-heading" style="display:none;">Why Choose car-rent-mauritius.com</h2>
         <div class="features-inner">
             <div class="feature-item">
                 <span class="icon"><i class="fa-solid fa-calendar-check"></i></span>
@@ -1289,11 +1351,11 @@
     </section>
 
     <!-- ─── FLEET SECTION ─── -->
-    <section class="fleet-section" id="fleet">
+    <section class="fleet-section" id="fleet" aria-labelledby="fleet-heading">
         <div class="fleet-inner">
             <div class="fleet-header">
                 <div class="label"><span class="gold">—</span> Our Collection</div>
-                <h2>
+                <h2 id="fleet-heading">
                     The <span class="gold">Fleet</span>
                 </h2>
                 <p>Choose your ride — each model shown with all available colours</p>
@@ -1308,7 +1370,7 @@
     <!-- ─── FULL-SCREEN AMAZON-STYLE PRODUCT DETAIL MODAL ─── -->
     <div class="modal-overlay" id="productModal" onclick="closeModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            <button class="modal-close" onclick="closeModal()" aria-label="Close product details"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-body" id="modalBody">
                 <!-- Injected by JavaScript -->
             </div>
@@ -1316,7 +1378,7 @@
     </div>
 
     <!-- ─── FOOTER ─── -->
-    <footer id="contact">
+    <footer id="contact" role="contentinfo">
         <div class="container">
             <div class="footer-row">
                 <div class="footer-col">
@@ -1341,11 +1403,11 @@
                     <h3>Atelier</h3>
                     <p><i class="fa-solid fa-location-dot" style="color:var(--gold);margin-right:8px;"></i> Port Louis, Mauritius</p>
                     <p><i class="fa-solid fa-phone" style="color:var(--gold);margin-right:8px;"></i> +230 5254 1954</p>
-                    <p><i class="fa-solid fa-envelope" style="color:var(--gold);margin-right:8px;"></i> rent@carrent.mu</p>
+                    <p><i class="fa-solid fa-envelope" style="color:var(--gold);margin-right:8px;"></i> rent@car-rent-mauritius.com</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 car rent.mu — Mauritius. All rights reserved.</p>
+                <p>&copy; 2026 car-rent-mauritius.com — Mauritius. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1561,7 +1623,7 @@
                     <div class="price">${priceStr}</div>
                     <div class="desc">${car.description}</div>
                     <div class="modal-footer-actions">
-                        <a href="https://wa.me/23052541954?text=Hello%20car%20rent.mu%2C%20I%20would%20like%20to%20rent%20the%20${encodeURIComponent(car.brand + ' ' + car.name)}.%20Please%20let%20me%20know%20about%20availability%20and%20rates." 
+                        <a href="https://wa.me/23052541954?text=Hello%20car-rent-mauritius.com%2C%20I%20would%20like%20to%20rent%20the%20${encodeURIComponent(car.brand + ' ' + car.name)}.%20Please%20let%20me%20know%20about%20availability%20and%20rates." 
                            target="_blank" 
                            rel="noopener noreferrer" 
                            class="modal-whatsapp-btn">
